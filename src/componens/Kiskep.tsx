@@ -1,4 +1,5 @@
 import { type KepTipus } from "../adatok";
+import "./kiskep.css";
 
 interface KiskepProps {
   kepem: KepTipus;

@@ -1,6 +1,11 @@
-article .kiskep{
+article .kiskep img{
+    width: 300px;
+    height: auto;
+}
+
+article{
     display: flex;
     flex-wrap: wrap;
-    margin: 0 auto;
-    border: 10px solid red;
+    gap: 20px;
+    margin: auto 0;
 }
