@@ -1,13 +1,17 @@
 import Kiskep from "./Kiskep";
-import type { KepTipus } from "../adatok";
+import { KEPEKLISTA, type KepTipus } from "../adatok";
 import "./galeria.css";
+import { useState } from "react";
 
 interface GaleriaProps {
   lista: KepTipus[];
   kepKivalaszt: (index: number) => void;
 }
 
-export default function Galeria({ lista,kepKivalaszt }: GaleriaProps) {
+export default function Galeria({ lista, kepKivalaszt }: GaleriaProps) {
+
+
+
   return (
     <>
       {lista.map((e, i) => {
