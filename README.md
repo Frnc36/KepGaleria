@@ -62,15 +62,14 @@ src/
 
 ## Telepítés és Futtatás
 1. Nyiss meg egy terminált a projekt mappájában.
+
 2. Telepítsd a függőségeket:
-**Bash**
 ```text
 npm install
 ```
 *Minden le clone-ozott projektnél kell*
 
 3. Indítsd el a fejlesztői szervert:
-**Bash**
 ```text
 npm run dev
 ```
