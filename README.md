@@ -1,5 +1,10 @@
 # Kép Galéria - React projekt Context-tel
 
+## Használt technológiák
+- React (Komponensalapú)
+- TypeScript
+- React Context (Globális állapotkezelés)
+
 ## Alapfogalmak
 **Komponnes (Components):** Olyan önálló, **újrafelhasználható kis kódblokkok** (függvények), amelyek HTML-hez hasonló elemeket (JSX-et) adnak vissza.
 
@@ -21,7 +26,7 @@
 ```text
 src/
 │
-├── adatok.ts                # A képek listája és a TypeScript típusok
+├── adatok.tsx                # A képek listája és a TypeScript típusok
 ├── App.tsx                  # A gyökérkomponens
 ├── App.css                  
 ├── main.tsx                 # Itt történik a Provider-rel való körbeölelés
@@ -36,3 +41,38 @@ src/
 └── context/                 # Context mappája
     └── KepContext.tsx       # A globális állapotkezelés és a useKepContext hook (saját hook)   
 ```
+
+## Főbb Komponensek és Szerepük
+
+### App.tsx:
+- Összefogja az alkalmazás nagyobb blokkjait: a nagy képet (<Nagykep />), a galériát (<Galeria />).
+
+### Nagykep.tsx: 
+- Megjeleníti az aktuálisan kiválasztott nagy képet és a hozzá tartozó leírást.
+- "Balra" és "Jobbra" gombokkal biztosítja a képek közötti léptetést a Context segítségével.
+
+### Galeria.tsx:
+- Végigmegy a KEPEKLISTA elemein a .map() metódussal, és mindegyik elemhez generál egy Kiskep komponenst.
+
+### Kiskep.tsx:
+- Megjeleníti a kisképet, valamint egy "Kiválaszt" gombot, amellyel a felhasználó közvetlenül beállíthatja az adott képet nagyképként.
+
+### KepContext.tsx:
+- Itt található a KepProvider és a useKepContext hook. Kezeli az aktualisIndex state-et, valamint a képválasztási (kepKivalaszt) és lapozási (elozoKep, kovetkezoKep) logikát (beleértve a végtelenített körbefutást is).
+
+## Telepítés és Futtatás
+1. Nyiss meg egy terminált a projekt mappájában.
+2. Telepítsd a függőségeket:
+**Bash**
+```text
+npm install
+```
+*Minden le clone-ozott projektnél kell*
+
+3. Indítsd el a fejlesztői szervert:
+**Bash**
+```text
+npm run dev
+```
+
+4. Nyisd meg a terminálban megjelenő helyi linken (*http://localhost:5173*) elérhető weboldalt a böngésződben.
