@@ -1,5 +1,6 @@
 import { type KepTipus } from "../adatok";
 import { useKepContext } from "../context/KepContext";
+import "./Nagykep.css";
 
 interface NagyKepProps {
   kepem: KepTipus;
@@ -17,10 +18,10 @@ function Nagykep({ kepem }: NagyKepProps) {
       >
         Balra
       </button>
-      <div>
+      <div className="kep-kontener">
         <img src={kepem.kep} alt={kepem.leiras} />
-      </div>
       <p>{kepem.leiras}</p>
+      </div>
       <button
         onClick={() => {
           kovetkezoKep();

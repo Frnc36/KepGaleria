@@ -1,0 +1,32 @@
+.nagykep {
+  display: flex;
+  align-items: center;  /* Függőlegesen középre igazítja a gombokat és a kép-dobozt */
+  justify-content: center; /* Vízszintesen középre igazítja az egészet */
+  gap: 20px;            /* Távolság a gombok és a kép között */
+  margin: 20px 0;
+}
+
+/* Ez felelős azért, hogy a kép és a leírás egymás alatt legyenek */
+.kep-kontener {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nagykep img {
+  max-width: 500px;     
+  height: auto;
+  border-radius: 8px;
+}
+
+.nagykep p {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.nagykep button {
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
