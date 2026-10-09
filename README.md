@@ -17,3 +17,22 @@
 
 **useContext Hook:** Ezzel a függvénnyel tudjuk kiolvasni a Contextben tárolt adatokat és függvényeket közvetlenül az adott komponensben, anélkül, **hogy props-on keresztül kéne azokat átvenni**.
 
+## Projekt szerkezet
+```text
+src/
+│
+├── adatok.ts                # A képek listája és a TypeScript típusok
+├── App.tsx                  # A gyökérkomponens
+├── App.css                  
+├── main.tsx                 # Itt történik a Provider-rel való körbeölelés
+│
+├── componens/               # Komponensek mappája
+│   ├── Galeria.tsx          # A kisképeket listázó komponens
+│   ├── galeria.css
+│   ├── Kiskep.tsx           # Egyetlen kisképet és a kiválasztó gombot megjelenítő komponens
+│   ├── kiskep.css
+│   └── Nagykep.tsx          # Az aktuális nagy képet és a lapozógombokat tartalmazó komponens
+│
+└── context/                 # Context mappája
+    └── KepContext.tsx       # A globális állapotkezelés és a useKepContext hook (saját hook)   
+```
