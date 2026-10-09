@@ -1,6 +1,6 @@
 import Kiskep from "./Kiskep";
 import { type KepTipus } from "../adatok";
-import "./galeria.css";
+import "./Galeria.css";
 
 
 interface GaleriaProps {
