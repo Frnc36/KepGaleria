@@ -1,10 +1,13 @@
 import { type KepTipus } from "../adatok";
+import { useKepContext } from "../context/KepContext";
+
 interface NagyKepProps {
   kepem: KepTipus;
-  elozoKep: () => void;
-  kovetkezoKep: () => void;
 }
-function Nagykep({ kepem, elozoKep, kovetkezoKep }: NagyKepProps) {
+
+function Nagykep({ kepem }: NagyKepProps) {
+  const { elozoKep, kovetkezoKep } = useKepContext();
+
   return (
     <div className="nagykep">
       <button
