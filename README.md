@@ -1,5 +1,7 @@
 # Kép Galéria - React projekt Context-tel
 
+## Pages Link : *https://github.com/Frnc36/KepGaleria.git*
+
 ## Használt technológiák
 - React (Komponensalapú)
 - TypeScript
