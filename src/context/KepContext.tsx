@@ -34,7 +34,7 @@ export function KepProvider({ children }: KepProviderProps) {
       {children}
     </KEPCONTEXT.Provider>
   );
-//Alap szerkezett vége
+  //Alap szerkezett vége
 
   function kepKivalaszt(index: number) {
     console.log(index);
@@ -52,6 +52,8 @@ export function KepProvider({ children }: KepProviderProps) {
   function kovetkezoKep() {
     if (aktualisIndex < KEPEKLISTA.length - 1) {
       setAktualisIndex(aktualisIndex + 1);
+    } else {
+      setAktualisIndex(0);
     }
   }
 }
