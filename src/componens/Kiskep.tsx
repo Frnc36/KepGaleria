@@ -1,5 +1,5 @@
 import { type KepTipus } from "../adatok";
-import "./kiskep.css";
+import "./Kiskep.css";
 import { useKepContext } from "../context/KepContext";
 
 interface KiskepProps {
